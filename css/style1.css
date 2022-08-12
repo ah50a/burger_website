@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 3600px;  
+}
+header{
+    min-height: 10vh;
+    position: relative;
+}
+header nav{
+    width: 100%;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: space-evenly;
+    /* position: fixed; */
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    z-index: 999;
+}
+header nav ul{
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+header nav ul li{
+    list-style: none;
+    padding:8px 10px;
+    /* background: red; */
+}
+header nav a{
+    text-decoration: none;
+    color: #666;
+    display: block;
+}
+.logo{
+    margin-top: 20px;
+}
+header nav a:hover{
+    color: #ff3838;
+}
+/* --------------------sec1 style--------------------------- */
+.sec1{
+    margin-top: 100px;
+    background: url(../images/home-bg.jpg) no-repeat center/cover;
+}
+.hed_btn{
+    color: #ff3838;
+    z-index: 0;
+}
+.hed_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background:#ff3838;
+    width: 0%;
+    height: 100%;
+    transition: .3s linear;
+    z-index: -1;
+}
+.hed_btn:hover::before{
+    width: 100%;
+    left: 0;
+}
+.hed_btn:hover{
+    color: #fff;
+}
+/* --------------------sec2 style--------------------------- */
+ .sec2_box2{
+    border: 2px solid #666;
+    border-radius: 5px;
+    box-shadow: 0 .5rem 1rem #6669;
+    text-transform: capitalize;
+}
+.image_down{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    border: solid;
+    border-radius: 5px;
+    box-shadow: 0 .5rem 2rem #6669;
+    cursor: pointer;
+    transition: .2s linear;
+    -webkit-transition: .2s linear;
+    -moz-transition: .2s linear;
+    -ms-transition: .2s linear;
+    -o-transition: .2s linear;
+}
+.box-img{
+    cursor: pointer;
+}
+.box-img:hover .image_down{
+    height: 100%;
+    top: 0;
+}
+/* -------------------------------sec4 style---------------- */
+
+/* ---------------------up style--------- */
+#scroll-top{
+    position: fixed;
+    top:-120%;
+    right:2rem;
+    padding:.4rem 1.5rem;
+    font-size: 4rem;
+    background: #ff3838;
+    color:#fff;
+    border-radius: .5rem;
+    transition: 1s linear;
+    z-index: 1000;
+}
+  #scroll-top.active{
+    top:calc(100% - 10rem);
+  }
+  /* ---------------sec5 style----------------- */
+  .sec5content{
+     background-color: rgba(255,255,255,.8);
+     height: 100%;
+     top: -200%;
+     left: 0;
+     transition: .2s linear;
+     -webkit-transition: .2s linear;
+     -moz-transition: .2s linear;
+     -ms-transition: .2s linear;
+     -o-transition: .2s linear;
+}
+  .sec5box{
+    cursor: pointer;
+    padding-top: 10px;
+  }
+  .sec5box:hover .sec5content{
+    top: 0;
+  }
+  @media(max-width:1025px){
+      .sec5box{
+          min-height: 250px;
+          padding-bottom: 10px;
+      }
+      .sec5img{
+          height: 100%;
+      }
+      .sec5img img{
+        height: 100%;
+    }
+      .sec5content{
+          height: 100%;
+      }
+  }
+  /* -------------------sec user style------------ */
+  .userimg > img{
+    border-radius: 50%; 
+    width: 150px;
+     border: solid 20px #fff;
+      position: absolute;
+       top: -35%; right: 25%;
+  }
+  @media(max-width:767px) {
+      .contuser {
+          padding-top: 30px;
+      }
+      .userimg > img{
+          right: 40%;
+      }
+      .user1{
+          margin-top: 70px;
+      }
+  }
+  @media(max-width:565px) {
+   
+    .userimg > img{
+        right: 30%;
+    }
+    
+}
+/* --------------------- */
+.orderimg{
+    width: 400px;
+     height: 250px;
+}
+.inputs > fieldset{
+    border: none;
+}
+.inputs > fieldset > input{
+    height: 40px;
+
+}
+
+/* ---------------------- */
+@media(max-width:800px){
+    .ordercontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .inputs input{
+        width: 100%;
+    }
+    .orderimg, .inputs{
+        margin: auto;
+    }
+}
+@media(max-width:1196px){
+    .inputs{
+        width: 300px;
+    }
+    .inputs > fieldset > input{
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+    }
+    .orderimg{
+        height: 300px;
+    }
+}
+
+
+
